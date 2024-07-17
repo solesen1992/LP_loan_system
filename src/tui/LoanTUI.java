@@ -58,7 +58,65 @@ public class LoanTUI {
 		
 		//TODO: Make sure null returns aren't accepted.
 		
+		// Create a new loan with the given parameters
+		loanController.createLoan(loanNumber, date, period, "unfinished");
 		
+		//Gets friend's phone number from user input
+		String phone = TextInput.inputString("Indtast vennens telefonnummer: ");
+		//Adds friend to loan using phone number
+		loanController.findAndAddFriendByPhone(phone);
+		
+		//Gets copy's serial number from user input
+		String serialNumber = TextInput.inputString("Indtast serienummer: ");
+		//Adds copy to loan using serial number
+		loanController.findAndAddCopyBySerialNumber(serialNumber);
+		
+		//Completes the loan and stores it in loanToPrint
+		Loan loanToPrint = loanController.completeLoan();
+		//If loanToPrint is not null
+		if (loanToPrint != null) {
+			//if the friend associated with the loan is not null
+			if (loanToPrint.getFriend() != null) {
+				//Prints the name of the friend
+				System.out.println("Ven: " + loanToPrint.getFriend().getName());
+			}
+			/**
+			 * Prints information about the loan such as loan number, borrowing date, loan period,
+			 * serial number and loan status
+			 * */
+			System.out.println("Lånenummer: " + loanToPrint.getLoanNumber());
+			System.out.println("Dato: " + loanToPrint.getBorrowDate());
+			System.out.println("Låneperiode: " + loanToPrint.getPeriod() + " dage");
+			System.out.println("Serienummer: " + serialNumber);
+			System.out.println("Status på lån: " + loanToprint.getState());
+			//If the copy associated with the loan is not null, print the title of the LP
+			if (loanToPrint.getCopy() != null) {
+				System.out.println("Kopi: " + loanToPrint.getCopy().getLp().getTitle());
+			}
+		}
+		//If loanToPrint is null
+		else {
+			//Print error message
+			System.out.println("Lånet kunne ikke færdiggøres. Prøv igen");
+		}
+	}
+	
+	/**
+	 * This method gives the options: Create a new loan or return.
+	 * */
+	private int writeLoanMenu() {
+		// Create a new TextOptions object for the menu
+		TextOptions menu = new TextOptions("\n ***** Udlånsmenu *****", "Tilbage");
+		// Adds a "Create loan" option to the menu
+		menu.addOption("Opret lån");
+		
+		//TODO: Add more menu options.
+		
+		// Prompt the user for input and store the result in choice
+		int choice = menu.prompt();
+		
+		//returns the users choice
+		return choice;
 	}
 	
 	
