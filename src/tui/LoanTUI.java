@@ -128,8 +128,4 @@ public class LoanTUI {
 		//returns the users choice
 		return choice;
 	}
-	
-	
-	
-
 }
