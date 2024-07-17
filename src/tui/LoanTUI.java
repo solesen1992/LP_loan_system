@@ -5,7 +5,17 @@ import controller.LoanController;
 import model.Loan;
 
 /**
- * LoanTUI is the user interface for loans.
+ * LoanTUI is the user interface for loans. It provides a simple text-based interface for users to create
+ * and manage loans. It relies on the LoanController to handle the actual loan logic and operations. 
+ * The interface allows users to create a new loan, input necessary details, and view the 
+ * loan information upon successful creation.
+ * 
+ * The start() method manages the main loop of the user interface. It continuously displays a menu
+ * and processes user choices. It calls 'createLoan()' if the user chooses to create a loan.
+ * 
+ * createLoan() handles the creation of a new loan.
+ * 
+ * writeLoanMenu() displays the loan menu and prompts the user for a choice. It returns the users choice.
  * */
 
 public class LoanTUI {
