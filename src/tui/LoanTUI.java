@@ -34,7 +34,7 @@ public class LoanTUI {
 				//call the createLoan method
 				createLoan();
 			}
-			//TO DO - when there's a need for more menu items
+			//TODO: - when there's a need for more menu items
 			//If the user chooses any other option
 			else {
 				//exit the loop
@@ -44,8 +44,24 @@ public class LoanTUI {
 	}
 	
 	/**
-	 * 
+	 * This method creates a loan. It takes input about the loans period, the friend's phone number
+	 * and the LP copy's serial number. Then this method prints pout the loan information.
 	 * */
+	private void createLoan() {
+		//TODO: Assign a proper loan number.
+		//The loan number is right now at 0
+		int loanNumber = 0;
+		//Gets the loan period from the user input
+		int period = TextInput.inputNumber("Antal dage for lånet: ");
+		//Creates a new Date object with the current date
+		Date date = new Date();
+		
+		//TODO: Make sure null returns aren't accepted.
+		
+		
+	}
+	
+	
 	
 
 }
