@@ -7,7 +7,7 @@ Is a part of a group project made in the fall of 2023.
 
 # Documentation
 ## Architecture
-An open three-layer architecture is used, with a UI layer, control layer and model layer. The UI layer consists of a text interface where user input is read and handled. Different TUI classes handle various system areas, such as LoanTUI handling loans. The control layer consists of various control classes that manage the system's logic, with access to read and edit the model layer. The model layer is responsible for storing information within the system, using classes representing various real and abstract objects that need to be managed. Container classes are used to store and retrieve data, functioning similarly to a database.
+An open three-layer architecture is used, with a UI layer, control layer, and model layer. The UI layer consists of a text interface where user input is read and handled. Different TUI classes handle various system areas, such as LoanTUI handling loans. The control layer consists of various control classes that manage the system's logic, with access to read and edit the model layer. The model layer is responsible for storing information within the system, using classes representing various real and abstract objects that need to be managed. Container classes are used to store and retrieve data, functioning similarly to a database.
 
 ## Design Class Diagram
 ![designklassediagrammet](https://github.com/user-attachments/assets/74d1686b-8772-48d8-bd72-112656110dd4)
@@ -56,6 +56,6 @@ Another interesting test is shown above, which tests the findCopyBySerialNumber 
 
 This test is in our LPControllerTest. We had several problems with this and reviewed the code with a supervisor without being able to find the issue. After creating our TryMe class, we managed to find the error. We had forgotten to add our copy to our LP. This is what we do here:
 
-The reason it is important that the copy is added to the LP is that our method searches for copies through our LPs. The method will not be able to find any copies if they are not added to the LP's ArrayList.
+The reason the copy must be added to the LP is that our method searches for copies through our LPs. The method will not be able to find any copies if they are not added to the LP's ArrayList.
 
-Finally, we set findCopyBySerialNumber("123D") = copy. In other words, we compare our method's ability to find a copy by the serial number with the copy that contains the same serial number. These should be the same. We also get a checkmark, indicating that the test worked as expected.
+Finally, we set findCopyBySerialNumber("123D") = copy. In other words, we compare our method's ability to find a copy by the serial number with a copy that contains the same serial number. These should be the same. We also get a checkmark, indicating that the test worked as expected.
