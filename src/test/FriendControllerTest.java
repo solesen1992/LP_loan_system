@@ -73,7 +73,7 @@ class FriendControllerTest {
 	 * the JUnit framework.
 	 * */
 	@Test
-	void test() {
+	void findFriendByPhoneTest() {
 		// This creates a new Friend object with the specified name, address, and phone number.
 		Friend friend = new Friend("Penrose", "Gaden", "Aalborg", "12345678");
 		
