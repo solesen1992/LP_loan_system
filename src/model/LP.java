@@ -18,7 +18,7 @@ public class LP {
 	/**
 	 * Constructor
 	 * */
-	public LP(String barcode, String title, String artist, Date publicationDate, ArrayList<Copy> copies) {
+	public LP(String barcode, String title, String artist, Date publicationDate) {
 		this.barcode = barcode;
 		this.title = title;
 		this.artist = artist;
