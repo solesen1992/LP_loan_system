@@ -5,6 +5,9 @@ The project is based on an LP Lending case involving a garage sale where LP reco
 
 Is a part of a group project made in the fall of 2023.
 
+# Screenshot of console program
+<img width="400" alt="console-menu" src="https://github.com/user-attachments/assets/debb1f92-148f-4188-9648-a2aa5ca9b556">
+
 # Documentation
 ## Architecture
 An open three-layer architecture is used, with a UI layer, control layer, and model layer. The UI layer consists of a text interface where user input is read and handled. Different TUI classes handle various system areas, such as LoanTUI handling loans. The control layer consists of various control classes that manage the system's logic, with access to read and edit the model layer. The model layer is responsible for storing information within the system, using classes representing various real and abstract objects that need to be managed. Container classes are used to store and retrieve data, functioning similarly to a database.
