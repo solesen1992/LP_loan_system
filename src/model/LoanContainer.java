@@ -26,7 +26,7 @@ public class LoanContainer {
 	  * if not, it will create a new LoanContainer.
 	  * @return the singleton instance of LoanContainer
 	  */
-	private static LoanContainer getInstance() {
+	public static LoanContainer getInstance() {
 		// Checks if the instance is null
 		if (instance == null) {
 			// If null, create a new LoanContainer
