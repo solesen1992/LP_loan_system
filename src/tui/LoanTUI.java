@@ -98,7 +98,7 @@ public class LoanTUI {
 			System.out.println("Dato: " + loanToPrint.getBorrowDate());
 			System.out.println("Låneperiode: " + loanToPrint.getPeriod() + " dage");
 			System.out.println("Serienummer: " + serialNumber);
-			System.out.println("Status på lån: " + loanToprint.getState());
+			System.out.println("Status på lån: " + loanToPrint.getState());
 			//If the copy associated with the loan is not null, print the title of the LP
 			if (loanToPrint.getCopy() != null) {
 				System.out.println("Kopi: " + loanToPrint.getCopy().getLp().getTitle());
