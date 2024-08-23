@@ -3,7 +3,7 @@ An LP (vinyl records) loan system. A console system where the user can borrow LP
 
 The project is based on an LP Lending case involving a garage sale where LP records are lent to friends. The system needs to track individual records, loan information, and the friends who borrow the LPs.
 
-Is a part of a group project made in the fall of 2023.
+Is a part of a group project made in the fall of 2023. It's from my education in Computer Science (1st semester)
 
 # Screenshot of console program
 <img width="400" alt="console-menu" src="https://github.com/user-attachments/assets/debb1f92-148f-4188-9648-a2aa5ca9b556">
